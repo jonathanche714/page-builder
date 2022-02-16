@@ -1,0 +1,28 @@
+{
+  "root": "apps/admin-nextjs-e2e",
+  "sourceRoot": "apps/admin-nextjs-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/admin-nextjs-e2e/cypress.json",
+        "devServerTarget": "admin-nextjs:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "admin-nextjs:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/admin-nextjs-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["admin-nextjs"]
+}
