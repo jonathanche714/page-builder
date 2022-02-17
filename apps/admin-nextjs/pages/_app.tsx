@@ -1,6 +1,7 @@
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import './styles.css';
+import { AppProvider } from './context';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -9,7 +10,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to admin-nextjs!</title>
       </Head>
       <main className="app">
-        <Component {...pageProps} />
+        <AppProvider>
+          <Component {...pageProps} />
+        </AppProvider>
       </main>
     </>
   );
