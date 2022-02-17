@@ -9,5 +9,5 @@
 6. Pull down this branch from segway-next: https://github.com/shipt/segway-next/pull/3739
 7. Install dependencies and run the app. Navigate to http://localhost:8080/custom-page
 8. Refresh the page to initiate a SSR call so data can be fetched from page builder
-
+9. Right now, the segway app will receive both the mobile and desktop layout payloads. When resizing the screen to a smaller viewport, it'll use the mobile layout
 
